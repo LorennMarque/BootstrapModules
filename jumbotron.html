@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body{
+            background-color: rgb(49, 49, 49);
+        }
+        .module {
+            background-color: rgb(255, 255, 255);
+            margin: 3% 1%;
+            position: relative;
+            padding: 2%;
+            border: 5px solid #ccc;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+
+        .title{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+            <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+              <i class="mx-3" data-feather="copy" stroke="white"></i>
+              <span class="fs-4 text-white">CopyModules</span>
+            </a>
+      
+            <ul class="nav nav-pills">
+              <li class="nav-item"><a href="index.html" class="nav-link text-white" aria-current="page">Home</a></li>
+              <li class="nav-item"><a href="heroes.html" class="nav-link text-white">Heroes</a></li>
+              <li class="nav-item"><a href="jumbotron.html" class="nav-link text-white active">Jumbotron</a></li>
+              <li class="nav-item"><a href="headers.html" class="nav-link text-white">Headers</a></li>
+              <li class="nav-item"><a href="features.html" class="nav-link text-white">Features</a></li>
+              <li class="nav-item"><a href="footers.html" class="nav-link text-white">Footers</a></li>
+            </ul>
+          </header>
+      </div>
+
+      <div class="container">
+        <h1 class="title">Jumbotron</h1>
+    </div>
+
+	<div class="module" data-aos="fade-up">
+		<div class="module-code">
+            <!-- Here goes the bootstrap module -->
+            <div class="container my-5">
+                <div class="p-5 text-center bg-body-tertiary rounded-3">
+                  <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><use xlink:href="#bootstrap"></use></svg>
+                  <h1 class="text-body-emphasis">Jumbotron with icon</h1>
+                  <p class="col-lg-8 mx-auto fs-5 text-muted">
+                    This is a custom jumbotron featuring an SVG image at the top, some longer text that wraps early thanks to a responsive <code>.col-*</code> class, and a customized call to action.
+                  </p>
+                  <div class="d-inline-flex gap-2 mb-5">
+                    <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                      Call to action
+                      <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+                    </button>
+                    <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                      Secondary link
+                    </button>
+                  </div>
+                </div>
+              </div>
+            <!-- Here closes the bootstrap module -->
+		</div>
+		<button class="copy-btn btn btn-primary round-pill"><i data-feather="copy"></i></button>
+	</div>
+
+	<div class="module" data-aos="fade-up">
+		<div class="module-code">
+            <!-- Here goes the bootstrap module -->
+            <div class="container my-5">
+                <div class="position-relative p-5 text-center text-muted bg-body border border-dashed rounded-5">
+                  <button type="button" class="position-absolute top-0 end-0 p-3 m-3 btn-close bg-secondary bg-opacity-10 rounded-pill" aria-label="Close"></button>
+                  <svg class="bi mt-5 mb-3" width="48" height="48"><use xlink:href="#check2-circle"></use></svg>
+                  <h1 class="text-body-emphasis">Placeholder jumbotron</h1>
+                  <p class="col-lg-6 mx-auto mb-4">
+                    This faded back jumbotron is useful for placeholder content. It's also a great way to add a bit of context to a page or section when no content is available and to encourage visitors to take a specific action.
+                  </p>
+                  <button class="btn btn-primary px-5 mb-5" type="button">
+                    Call to action
+                  </button>
+                </div>
+              </div>
+            <!-- Here closes the bootstrap module -->
+		</div>
+		<button class="copy-btn btn btn-primary round-pill"><i data-feather="copy"></i></button>
+	</div>
+
+    <div class="module" data-aos="fade-up">
+		<div class="module-code">
+            <!-- Here goes the bootstrap module -->
+            <div class="my-5">
+                <div class="p-5 text-center bg-body-tertiary">
+                  <div class="container py-5">
+                    <h1 class="text-body-emphasis">Full-width jumbotron</h1>
+                    <p class="col-lg-8 mx-auto lead">
+                      This takes the basic jumbotron above and makes its background edge-to-edge with a <code>.container</code> inside to align content. Similar to above, it's been recreated with built-in grid and utility classes.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <!-- Here closes the bootstrap module -->
+		</div>
+		<button class="copy-btn btn btn-primary round-pill"><i data-feather="copy"></i></button>
+	</div>
+
+    <div class="module" data-aos="fade-up">
+		<div class="module-code">
+            <!-- Here goes the bootstrap module -->
+            <div class="container my-5">
+                <div class="p-5 text-center bg-body-tertiary rounded-3">
+                  <h1 class="text-body-emphasis">Basic jumbotron</h1>
+                  <p class="lead">
+                    This is a simple Bootstrap jumbotron that sits within a <code>.container</code>, recreated with built-in utility classes.
+                  </p>
+                </div>
+              </div>
+            <!-- Here closes the bootstrap module -->
+		</div>
+		<button class="copy-btn btn btn-primary round-pill"><i data-feather="copy"></i></button>
+	</div>
+
+	<script>
+		const copyBtns = document.querySelectorAll('.copy-btn');
+
+		copyBtns.forEach(function(btn) {
+			btn.addEventListener('click', function() {
+				const moduleCode = this.previousElementSibling.innerHTML;
+				const range = document.createRange();
+				const pre = document.createElement('pre');
+				pre.textContent = moduleCode;
+				document.body.appendChild(pre);
+				range.selectNode(pre);
+				window.getSelection().removeAllRanges();
+				window.getSelection().addRange(range);
+				document.execCommand('copy');
+				window.getSelection().removeAllRanges();
+				document.body.removeChild(pre);
+			});
+		});
+	</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        feather.replace();
+        AOS.init();
+    </script>
+</body>
+</html>
