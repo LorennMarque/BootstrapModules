@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        body{
+            background-color: rgb(49, 49, 49);
+        }
+        .module {
+            background-color: rgb(255, 255, 255);
+            margin: 3% 1%;
+            position: relative;
+            padding: 2%;
+            border: 5px solid #ccc;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+
+        .title{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <i class="mx-3" data-feather="copy" stroke="white"></i>
+            <span class="fs-4 text-white">CopyModules</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="index.html" class="nav-link active" aria-current="page">Home</a></li>
+            <li class="nav-item"><a href="heroes.html" class="nav-link text-white ">Heroes</a></li>
+            <li class="nav-item"><a href="jumbotron.html" class="nav-link text-white">Jumbotron</a></li>
+            <li class="nav-item"><a href="headers.html" class="nav-link text-white">Headers</a></li>
+            <li class="nav-item"><a href="features.html" class="nav-link text-white">Features</a></li>
+            <li class="nav-item"><a href="footers.html" class="nav-link text-white">Footers</a></li>
+          </ul>
+        </header>
+      </div>
+      <div class="container">
+        <h1 class="title">Home</h1>
+    </div>
+	<div class="module" data-aos="fade-up">
+		<div class="module-code">
+            <!-- Here goes the bootstrap module -->
+         <p>Ejemplo</p>
+            <!-- Here closes the bootstrap module -->
+		</div>
+		<button class="copy-btn btn btn-primary round-pill"><i data-feather="copy"></i></button>
+	</div>
+
+
+	<script>
+		const copyBtns = document.querySelectorAll('.copy-btn');
+
+		copyBtns.forEach(function(btn) {
+			btn.addEventListener('click', function() {
+				const moduleCode = this.previousElementSibling.innerHTML;
+				const range = document.createRange();
+				const pre = document.createElement('pre');
+				pre.textContent = moduleCode;
+				document.body.appendChild(pre);
+				range.selectNode(pre);
+				window.getSelection().removeAllRanges();
+				window.getSelection().addRange(range);
+				document.execCommand('copy');
+				window.getSelection().removeAllRanges();
+				document.body.removeChild(pre);
+			});
+		});
+	</script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        feather.replace();
+        AOS.init();
+    </script>
+</body>
+</html>
